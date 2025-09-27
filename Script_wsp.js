@@ -3,7 +3,7 @@ async function enviarScript(scriptText){
 	main = document.querySelector("#main"),
 	textarea = main.querySelector(`div[contenteditable="true"]`)
 	
-	if(!textarea) throw new Error("Não há uma conversa aberta")
+	if(!textarea) throw new Error("No hay una conversacion abierta")
 	
 	for(const line of lines){
 		console.log(line)
@@ -12,8 +12,17 @@ async function enviarScript(scriptText){
 		document.execCommand('insertText', false, line);
 		textarea.dispatchEvent(new Event('change', {bubbles: true}));
 	
-		setTimeout(() => {
+		/*setTimeout(() => {
 			(main.querySelector(`[data-testid="send"]`) || main.querySelector(`[data-icon="send"]`)).click();
+		}, 100);*/
+		
+		setTimeout(() => {
+			const botonEnviar = main.querySelector('span[data-icon="wds-ic-send-filled"]')?.closest("div[role=button], button, div");
+			if(botonEnviar){
+				botonEnviar.click();
+			} else {
+				console.warn("No se encontró el botón de enviar");
+			}
 		}, 100);
 		
 		if(lines.indexOf(line) !== lines.length - 1) await new Promise(resolve => setTimeout(resolve, 250));
