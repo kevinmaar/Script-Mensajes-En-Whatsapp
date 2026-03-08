@@ -1,6 +1,6 @@
 # Enviar Guion Por WhatsApp
 
-Script para enviar guiones de peliculas mediante WhatsApp.
+Script para enviar mensajes automatizados en WhatsApp Web.
 
 ## Uso
 
