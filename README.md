@@ -1,4 +1,4 @@
-# Enviar Guion Por WhatsApp
+# Automatización en WhatsApp
 
 Script para enviar mensajes automatizados en WhatsApp Web.
 
