@@ -15,7 +15,7 @@ async function enviarInfinito(mensaje){
 			console.warn("No se encontró el botón de enviar");
 		}
 
-		await new Promise(resolve => setTimeout(resolve, 200));
+		await new Promise(resolve => setTimeout(resolve, 350));
 	}
 }
 
