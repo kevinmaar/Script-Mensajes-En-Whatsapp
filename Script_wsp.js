@@ -24,7 +24,7 @@ async function enviarScript(scriptText){
 		}, 100);
 
 		if(i !== lines.length - 1)
-			await new Promise(resolve => setTimeout(resolve, 250));
+			await new Promise(resolve => setTimeout(resolve, 350));
 	}
 
 	return lines.length;
