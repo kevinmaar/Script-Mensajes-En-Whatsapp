@@ -12,7 +12,10 @@ async function enviarInfinito(mensaje){
 		if(botonEnviar){
 			botonEnviar.click();
 		} else {
-			console.warn("No se encontró el botón de enviar");
+    console.warn("No se encontró el botón de enviar");
+    console.log([...document.querySelectorAll('footer button, footer [role="button"]')].map(b => ({aria: b.getAttribute("aria-label"), title: b.getAttribute("title"), html: b.outerHTML.slice(0, 200)})));
+    return;
+}
 		}
 
 		await new Promise(resolve => setTimeout(resolve, 350)); //400 para evitar sanciones
